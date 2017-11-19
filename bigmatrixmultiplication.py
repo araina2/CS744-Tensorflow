@@ -1,8 +1,5 @@
 """
-A sample client used to launch jobs on a Distributed TensorFlow cluster.
-In this program, we want to find the sum of traces of 5 random matrices.
-Each matrix is generated on a different process in the cluster and its traces
-are added together.
+TF client program for big matrix multiplication
 """
 
 import tensorflow as tf
