@@ -3,8 +3,9 @@
 export TF_LOG_DIR="/home/ubuntu/tf/logs"
 source /home/ubuntu/assign3_parta/uploaded-scripts/tfdefs.sh
 
-# startserver.py has the specifications for the cluster.
 terminate_cluster
+
+# startserver.py has the specifications for the cluster.
 start_cluster startserver.py
 
 echo "Executing the distributed tensorflow job from synchronoussgd.py"
@@ -17,6 +18,7 @@ python synchronoussgd.py
 END=$(date +%s)
 DIFF=$(( $END - $START ))
 echo "Program run time : $DIFF"
+
 #done
 # defined in tfdefs.sh to terminate the cluster
 #tensorboard --logdir=$TF_LOG_DIR

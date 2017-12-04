@@ -51,7 +51,7 @@ gradient_combined_updates = []
 
 g = tf.Graph()
 iterations = 20000000
-#iterations = 5
+#iterations = 80
 
 error_rate = 0
 
@@ -166,7 +166,7 @@ with g.as_default():
 					test_num = 0
 					errors = []
 					try:
-						while test_num < 10:
+						while test_num < 100:
 							result = sess.run(test_error)
 							errors.append(result)
 							#print "Printing errors vector"

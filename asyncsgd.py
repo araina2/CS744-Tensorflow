@@ -48,6 +48,7 @@ eta = 0.01
 
 g = tf.Graph()
 iterations = 20000000
+#iterations = 20
 #iterations = 2
 
 error_rate = 0
@@ -149,7 +150,7 @@ with g.as_default():
 					test_num = 0
 					errors = []
 					try:
-						while test_num < 10:
+						while test_num < 100:
 							result = sess.run(test_error)
 							errors.append(result)
 							#print "Printing errors vector"
@@ -170,8 +171,8 @@ with g.as_default():
 					#print errors
 					with open("error_rates_async_sgd.txt", "a+") as error_file :
 						error_file.write("\nError Rate after "+str(count)+" iteration "+str(error_rate))
-					count+=1
-					print "Number of examples read : "+str(count)
+				count+=1
+				print "Number of examples read : "+str(count)
 
 				#start = time.time()
 				#sess.run(sparse_gradient_update)
